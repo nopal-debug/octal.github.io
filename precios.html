@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Servicios y precios | TecnoSolucionesMX">
+<title>Servicios y precios | TecnoSolucionesMX</title>
+<link rel="stylesheet" href="estilo.css">
+<style>
+.botones-navegacion{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:18px 0}.boton-nav{text-decoration:none;display:inline-block;cursor:pointer}.contenido-pagina{max-width:900px;margin:50px auto;padding:30px;text-align:center}.volver{margin-top:24px;display:inline-block}
+.grid-info,.contacto-grid,.multimedia-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.tarjeta,.media-card,.info-contacto,.formulario,.nota{padding:22px;border-radius:14px}.media-card img,.media-card video{width:100%;height:auto;border-radius:10px}.media-card audio{width:100%;margin-top:12px}.tabla-precios{width:100%;border-collapse:collapse;margin:24px 0}.tabla-precios th,.tabla-precios td{padding:13px;text-align:left;border-bottom:1px solid #334}.tabla-contenedor{overflow-x:auto}.formulario label{display:block;margin-top:12px;font-weight:600}.formulario input,.formulario select,.formulario textarea{width:100%;padding:10px;margin-top:5px;box-sizing:border-box}.acciones{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}</style>
+</head>
+<body>
+<header>
+<div class="logo-area">
+<img src="TecnoSoluciones.jpg" alt="Logotipo de TecnoSolucionesMX">
+<div><h1>TecnoSolucionesMX</h1><p class="eslogan">Tecnología que impulsa tus ideas</p></div>
+</div>
+<nav aria-label="Navegación principal"><div class="botones-navegacion">
+<a class="boton boton-nav" href="inicio.html">Inicio</a>
+<a class="boton boton-nav" href="servicios.html">Servicios</a>
+<a class="boton boton-nav" href="precios.html">Precios</a>
+<a class="boton boton-nav" href="multimedia.html">Multimedia</a>
+<a class="boton boton-nav" href="contacto.html">Contacto</a>
+</div></nav>
+</header>
+<main class="contenido-pagina"><h2>Servicios y precios orientativos</h2><p>Estos precios sirven como referencia inicial. El costo final puede variar según el alcance, los materiales y las funciones requeridas.</p><div class="tabla-contenedor"><table class="tabla-precios"><thead><tr><th>Servicio</th><th>Qué contempla</th><th>Duración</th><th>Precio</th></tr></thead><tbody><tr><td>Desarrollo Web</td><td>Página web empresarial</td><td>7 días</td><td>$3,500 MXN</td></tr><tr><td>Soporte Técnico</td><td>Diagnóstico y solución</td><td>2 horas</td><td>$500 MXN</td></tr><tr><td>Seguridad Informática</td><td>Configuración básica</td><td>4 horas</td><td>$900 MXN</td></tr><tr><td>Instalación de Redes</td><td>Configuración de red local</td><td>1 día</td><td>$1,500 MXN</td></tr><tr><td>Aplicación Móvil</td><td>Aplicación básica</td><td>15 días</td><td>$6,500 MXN</td></tr><tr><td>Servicios en la Nube</td><td>Configuración y almacenamiento</td><td>3 horas</td><td>$800 MXN</td></tr></tbody></table></div><section class="nota"><h3>¿Cómo se define una cotización?</h3><p>Conocemos tu objetivo, revisamos el alcance y confirmamos qué incluye el servicio antes de iniciar.</p></section><a class="boton" href="#cotizador">Solicitar una cotización</a><section><h2>Qué puede modificar el precio</h2><div class="grid-info"><article class="tarjeta"><h3>Alcance</h3><p>El número de páginas, funciones, equipos o usuarios influye en el tiempo de trabajo.</p></article><article class="tarjeta"><h3>Complejidad</h3><p>Las integraciones, configuraciones especiales y necesidades técnicas pueden requerir más horas.</p></article><article class="tarjeta"><h3>Materiales</h3><p>La creación o preparación de textos, imágenes, dominios, servicios externos o respaldos se revisa por separado cuando aplique.</p></article></div></section>
+<section class="cotizador" id="cotizador">
+<h2>Cotiza tu proyecto</h2>
+<p>Selecciona el servicio y algunas características para obtener un estimado inicial. El precio final se confirma después de revisar el alcance.</p>
+<div class="form-grid">
+<div class="campo"><label for="cotServicio">Servicio principal *</label><select id="cotServicio"><option value="">Selecciona un servicio</option><option value="3500">Desarrollo Web — desde $3,500 MXN</option><option value="500">Soporte Técnico — desde $500 MXN</option><option value="900">Seguridad Informática — desde $900 MXN</option><option value="1500">Instalación de Redes — desde $1,500 MXN</option><option value="6500">Desarrollo de Aplicaciones — desde $6,500 MXN</option><option value="800">Servicios en la Nube — desde $800 MXN</option></select></div>
+<div class="campo"><label for="cotUrgencia">Prioridad del proyecto</label><select id="cotUrgencia"><option value="1">Calendario flexible</option><option value="1.15">Prioridad alta (+15%)</option><option value="1.3">Entrega urgente (+30%)</option></select></div>
+<div class="campo"><label for="cotComplejidad">Nivel de alcance</label><select id="cotComplejidad"><option value="1">Inicial</option><option value="1.2">Intermedio (+20%)</option><option value="1.45">Avanzado (+45%)</option></select></div>
+<div class="campo"><label for="cotExtras">Extras</label><select id="cotExtras"><option value="0">Sin extras</option><option value="500">Configuración adicional (+$500)</option><option value="900">Capacitación y acompañamiento (+$900)</option><option value="1400">Configuración + capacitación (+$1,400)</option></select></div>
+</div>
+<div class="acciones"><button type="button" id="calcularCotizacion">Calcular estimado</button><a class="boton" href="contacto.html">Solicitar cotización formal</a></div>
+<div class="resultado-cotizacion" id="resultadoCotizacion" aria-live="polite"><span>Tu estimado aparecerá aquí.</span></div>
+<p class="aviso">Este cálculo es informativo y no representa una factura ni una propuesta definitiva. El monto puede cambiar según requerimientos, materiales, licencias e integraciones.</p>
+</section>
+<script>
+(function(){
+ const servicio=document.getElementById('cotServicio'), urgencia=document.getElementById('cotUrgencia'), complejidad=document.getElementById('cotComplejidad'), extras=document.getElementById('cotExtras'), resultado=document.getElementById('resultadoCotizacion');
+ document.getElementById('calcularCotizacion').addEventListener('click',function(){
+  if(!servicio.value){resultado.innerHTML='<span>Selecciona un servicio para calcular tu estimado.</span>';return;}
+  const base=Number(servicio.value), total=Math.round((base*Number(urgencia.value)*Number(complejidad.value)+Number(extras.value))/50)*50;
+  resultado.innerHTML='Estimado inicial: <strong>$'+total.toLocaleString('es-MX')+' MXN</strong><br><span>Solicita una revisión para conocer el alcance exacto de tu proyecto.</span>';
+ });
+})();
+</script>
+<section class="nota"><h2>Antes de contratar</h2><p>La tabla es una guía de referencia y no sustituye una cotización personalizada. Para confirmar disponibilidad, alcance y precio final, describe tu proyecto desde la página de contacto.</p><a class="boton" href="#cotizador">Solicitar revisión de mi proyecto</a></section>
+<a class="boton volver" href="index.html">Volver al Lobby</a>
+</main>
+<footer><p>&copy; 2026 TecnoSolucionesMX. Todos los derechos reservados.</p></footer>
+</body>
+</html>
